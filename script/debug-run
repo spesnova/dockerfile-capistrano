@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Usage: script/debug-run
+
+set -e
+
+docker kill capistrano > /dev/null 2>&1 || true
+docker rm   capistrano > /dev/null 2>&1 || true
+docker run \
+  --rm \
+  -it \
+  --name capistrano \
+  -v $PWD/capistrano:/capistrano \
+  -v $PWD/capistrano/.ssh/insecure_private_key:/capistrano/.ssh/insecure_private_key \
+  quay.io/spesnova/capistrano \
+  /bin/bash
