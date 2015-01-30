@@ -16,7 +16,7 @@ $ docker run \
     -it \
     --name capistrano \
     -v /path/to/.ssh:/capistrano/.ssh \
-    spesnova/capistrano \
+    quay.io/spesnova/capistrano \
     cap -T
 ```
 
@@ -33,7 +33,7 @@ docker run \
   -it \
   --name capistrano \
   -v /path/to/.ssh:/capistrano/.ssh \
-  spesnova/capistrano \
+  quay.io/spesnova/capistrano \
   cap $@
 ```
 
