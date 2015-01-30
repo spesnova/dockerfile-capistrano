@@ -1,0 +1,6 @@
+README.md
+capistrano/.ssh/*
+coreos/*
+script/*
+.git
+.gitignore
