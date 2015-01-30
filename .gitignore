@@ -1,0 +1,6 @@
+.env
+.DS_Store
+user-data
+.vagrant
+known_hosts
+insecure_private_key
