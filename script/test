@@ -4,6 +4,8 @@
 
 set -e
 
+script/build
+
 docker kill capistrano > /dev/null 2>&1 || true
 docker rm   capistrano > /dev/null 2>&1 || true
 
@@ -14,7 +16,7 @@ docker run \
   --name capistrano \
   -v $PWD/capistrano/.ssh:/capistrano/.ssh \
   quay.io/spesnova/capistrano \
-  cap --version | grep "3.0.1" > /dev/null 2>&1
+  cap -T
 
 if test $? -eq 0
 then
