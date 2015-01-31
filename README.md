@@ -4,7 +4,7 @@ Use capistrano as one-off container.
 ## SUPPORTED TAGS
 
 * `latest`
- * Capistrano 3.0.1
+ * Capistrano 3.3.5
  * Ruby 2.1.5
  * Ubuntu 14.04 LTS
 
@@ -41,7 +41,7 @@ then you can `cap` command on CoreOS machine.
 
 ```bash
 core@core-01 ~ $ cap --version
-Capistrano Version: 3.0.1 (Rake Version: 10.4.2)
+Capistrano Version: 3.3.5 (Rake Version: 10.4.2)
 ```
 
 ## LISENCE
