@@ -16,7 +16,7 @@ docker run \
   --name capistrano \
   -v $PWD/capistrano/.ssh:/capistrano/.ssh \
   quay.io/spesnova/capistrano \
-  cap --version
+  cap -T
 
 if test $? -eq 0
 then

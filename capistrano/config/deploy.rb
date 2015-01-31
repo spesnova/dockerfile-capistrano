@@ -1,4 +1,4 @@
-lock "3.0.1"
+lock "3.3.5"
 
 set :format, :pretty
 set :pty, true
