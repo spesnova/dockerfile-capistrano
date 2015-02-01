@@ -20,14 +20,21 @@ $ docker run \
     cap -T
 ```
 
-### `cap` command on CoreOS
-Create `/opt/bin/cap`
+Typing this command every time will be annoying.
+So I recommend to create a small wrap script.
+For example, create `/opt/bin/cap` and add execute permission to it.
+
+```bash
+$ touch /opt/bin/cap && cdmod +x /opt/bin/cap
+```
 
 ```bash
 #!/bin/bash
 
 set -e
 
+docker kill capistrano > /dev/null 2>&1 || true
+docker rm   capistrano > /dev/null 2>&1 || true
 docker run \
   --rm \
   -it \
@@ -37,12 +44,18 @@ docker run \
   cap $@
 ```
 
-then you can `cap` command on CoreOS machine.
+Then you can use `cap` command on host machine.
 
 ```bash
-core@core-01 ~ $ cap --version
+$ cap --version
 Capistrano Version: 3.3.5 (Rake Version: 10.4.2)
 ```
+
+### Environment Variables
+`LOG_LEVEL`
+
+This sets Capistranos log level.
+`trace`, `warn`, `info`, `warn`, `error`, `fatal` are available. (default to `info`)
 
 ## LISENCE
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
