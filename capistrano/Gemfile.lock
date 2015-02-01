@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/spesnova/capistrano-coreos.git
-  revision: 8f4ec63861ac43c4308ead9a06a3af75b0caf73e
+  revision: f4d5ab177ec0954690742ec71e4b64dd025cf0cb
   specs:
     capistrano-coreos (0.0.1)
       capistrano (~> 3.3.5)
