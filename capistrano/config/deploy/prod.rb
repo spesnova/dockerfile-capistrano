@@ -3,11 +3,13 @@ set :stage, :prod
 #
 # Roles
 #
-role :all, ["172.17.8.101", "172.17.8.102", "172.17.8.103"]
 
 #
 # Servers
 #
+server "172.17.8.101"
+server "172.17.8.102"
+server "172.17.8.103"
 
 #
 # SSH options
