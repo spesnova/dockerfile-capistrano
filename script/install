@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Usage: script/install
+
+set -e
+
+echo "==> Pulling latest image..."
+docker pull quay.io/spesnova/capistrano
+
+echo "==> Installing cap command to this machine..."
+sudo mkdir -p /opt/bin
+sudo cp script/run /opt/bin/cap
+sudo chmod +x /opt/bin/cap
+echo "    created /opt/bin/cap"
