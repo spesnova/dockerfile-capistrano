@@ -4,5 +4,5 @@
 
 set -e
 
-echo "==> Running build..."
+echo "==> Building image..."
 docker build -t=quay.io/spesnova/capistrano .
